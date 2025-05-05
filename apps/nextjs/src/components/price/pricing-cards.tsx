@@ -1,6 +1,4 @@
-// @ts-ignore
-// @ts-nocheck
-"use client";
+"use client"
 
 import {
   JSXElementConstructor,
@@ -9,26 +7,25 @@ import {
   ReactElement,
   ReactNode,
   useState,
-} from "react";
-import Link from "next/link";
-import Balancer from "react-wrap-balancer";
+} from "react"
+import Link from "next/link"
+import Balancer from "react-wrap-balancer"
 
-import { Button, buttonVariants } from "@saasfly/ui/button";
-import * as Icons from "@saasfly/ui/icons";
-import { Switch } from "@saasfly/ui/switch";
+import { Button, buttonVariants } from "@saasfly/ui/button"
+import * as Icons from "@saasfly/ui/icons"
+import { Switch } from "@saasfly/ui/switch"
 
-import { BillingFormButton } from "~/components/price/billing-form-button";
-import { priceDataMap } from "~/config/price/price-data";
-import { useSigninModal } from "~/hooks/use-signin-modal";
-import { UserSubscriptionPlan } from "~/types";
+import { BillingFormButton } from "~/components/price/billing-form-button"
+import { priceDataMap } from "~/config/price/price-data"
+import { UserSubscriptionPlan } from "~/types"
 
 interface PricingCardsProps {
-  userId?: string;
-  subscriptionPlan?: UserSubscriptionPlan;
-  dict: Record<string, string>;
+  userId?: string
+  subscriptionPlan?: UserSubscriptionPlan
+  dict: Record<string, string>
   params: {
-    lang: string;
-  };
+    lang: string
+  }
 }
 
 export function PricingCards({
@@ -37,13 +34,12 @@ export function PricingCards({
   dict,
   params: { lang },
 }: PricingCardsProps) {
-  const isYearlyDefault = true;
-  const [isYearly, setIsYearly] = useState<boolean>(isYearlyDefault);
-  const signInModal = useSigninModal();
-  const pricingData = priceDataMap[lang];
+  const isYearlyDefault = true
+  const [isYearly, setIsYearly] = useState<boolean>(isYearlyDefault)
+  const pricingData = priceDataMap[lang]!
   const toggleBilling = () => {
-    setIsYearly(!isYearly);
-  };
+    setIsYearly(!isYearly)
+  }
   return (
     <section className="container flex flex-col items-center text-center">
       <div className="mx-auto mb-10 flex w-full flex-col gap-5">
@@ -70,28 +66,28 @@ export function PricingCards({
         {pricingData.map(
           (offer: {
             title:
+            | boolean
+            | Key
+            | ReactElement<any, string | JSXElementConstructor<any>>
+            | Iterable<ReactNode>
+            | PromiseLikeOfReactNode
+            | null
+            | undefined
+            prices: {
+              monthly:
+              | string
+              | number
               | boolean
-              | Key
               | ReactElement<any, string | JSXElementConstructor<any>>
               | Iterable<ReactNode>
               | PromiseLikeOfReactNode
               | null
-              | undefined;
-            prices: {
-              monthly:
-                | string
-                | number
-                | boolean
-                | ReactElement<any, string | JSXElementConstructor<any>>
-                | Iterable<ReactNode>
-                | PromiseLikeOfReactNode
-                | null
-                | undefined;
-              yearly: number;
-            };
-            benefits: any[];
-            limitations: any[];
-            id: string;
+              | undefined
+              yearly: number
+            }
+            benefits: any[]
+            limitations: any[]
+            id: string
           }) => (
             <div
               className="relative flex flex-col overflow-hidden rounded-xl border"
@@ -171,7 +167,7 @@ export function PricingCards({
                     />
                   )
                 ) : (
-                  <Button onClick={signInModal.onOpen}>{dict.signup}</Button>
+                  <Button>{dict.signup}</Button>
                 )}
               </div>
             </div>
@@ -194,5 +190,5 @@ export function PricingCards({
         </Balancer>
       </p>
     </section>
-  );
+  )
 }
