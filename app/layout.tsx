@@ -1,4 +1,5 @@
 import "@/styles/globals.css"
+import "@radix-ui/themes/styles.css";
 
 import { Inter as FontSans } from "next/font/google"
 import localFont from "next/font/local"
@@ -10,6 +11,7 @@ import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme-provider"
 import { siteConfig } from "@/app/site"
 import { i18n } from "@/i18n"
+import { Theme } from "@radix-ui/themes"
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -84,9 +86,11 @@ export default function RootLayout({
           defaultTheme="dark"
           enableSystem={false}
         >
-          {children}
-          <Toaster />
-          <TailwindIndicator />
+          <Theme>
+            {children}
+            <Toaster />
+            <TailwindIndicator />
+          </Theme>
         </ThemeProvider>
       </body>
     </html>

@@ -7,7 +7,7 @@ import { useSelectedLayoutSegment } from "next/navigation"
 import { cn } from "@/ui"
 
 import { MainNav, MainNavItem } from "./main-nav"
-import { LocaleChange } from "@/components/locale-change"
+import { LocaleSelector } from "@/components/locale-change"
 
 import useScroll from "@/hooks/use-scroll"
 
@@ -67,7 +67,7 @@ export function NavBar({
           <div className="w-[1px] h-8 bg-accent"></div>
 
           {rightElements}
-          <LocaleChange url={"/"} />
+          <LocaleSelector url={"/"} />
         </div>
       </div>
     </header>
