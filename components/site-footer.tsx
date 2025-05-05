@@ -5,14 +5,6 @@ import cn from "@/components/cn";
 
 import { ThemeToggle } from "@/components/theme-toggle";
 
-function getCopyrightText(
-  dict: Record<string, string | Record<string, string>>,
-) {
-  const currentYear = new Date().getFullYear();
-  const copyrightTemplate = String(dict.copyright);
-  return copyrightTemplate?.replace("${currentYear}", String(currentYear));
-}
-
 export function SiteFooter({
   className,
   dict,
@@ -35,7 +27,7 @@ export function SiteFooter({
             alt=""
           />
           <p className="text-center text-sm leading-loose md:text-left">
-            {getCopyrightText(dict)}
+            {dict.copyright as string}
           </p>
         </div>
         <ThemeToggle />
