@@ -95,28 +95,7 @@ export default async function IndexPage({
                       <Icons.ArrowRight className="h-5 w-5" />
                     </Button>
                   </Link>
-
                   <CodeCopy />
-                </div>
-
-                <div className="flex xl:flex-row flex-col items-center justify-start mt-4 w-full">
-                  <div className="flex">
-                    <AnimatedTooltip items={people} />
-                  </div>
-                  <div className="flex flex-col items-center justify-start ml-8">
-                    <div className="w-[340px]">
-                      <text className="font-semibold">9 </text>
-                      <text
-                        className="text-neutral-500 dark:text-neutral-400">{dict.marketing.contributors.contributors_desc}</text>
-                    </div>
-                    <div className="w-[340px]">
-                      <text
-                        className="text-neutral-500 dark:text-neutral-400">{dict.marketing.contributors.developers_first}</text>
-                      <ColourfulText text="2000" />
-                      <text
-                        className="text-neutral-500 dark:text-neutral-400">{dict.marketing.contributors.developers_second}</text>
-                    </div>
-                  </div>
                 </div>
               </div>
             </BackgroundLines>
@@ -132,26 +111,6 @@ export default async function IndexPage({
 
       <section className="container mt-8 md:mt-[-180px] xl:mt-[-180px]">
         <FeaturesGrid dict={dict.marketing.features_grid} />
-      </section>
-
-      <section className="container pt-24">
-        <div className="flex flex-col justify-center items-center pt-10">
-          <div className="text-lg text-neutral-500 dark:text-neutral-400">{dict.marketing.sponsor.title}</div>
-          <div className="mt-4 flex items-center gap-4">
-            <Link href="https://www.twillot.com/" target="_blank">
-              <Image src="https://www.twillot.com/logo-128.png" width="48" height="48" alt="twillot" />
-            </Link>
-            <Link href="https://www.setupyourpay.com/" target="_blank">
-              <Image src="https://www.setupyourpay.com/logo.png" width="48" height="48" alt="setupyourpay" />
-            </Link>
-            <Link href="https://opencollective.com/saasfly" target="_blank">
-              <div className="flex items-center gap-2 px-4 py-2 rounded-xl border-2 border-dashed border-neutral-300 dark:border-neutral-700 hover:bg-accent dark:hover:bg-neutral-800/30">
-                <Icons.Heart className="w-5 h-5 fill-pink-600 text-pink-600 dark:fill-pink-700 dark:text-pink-700" />
-                <span className="text-sm font-medium text-neutral-500 dark:text-neutral-200">{dict.marketing.sponsor.donate || ''}</span>
-              </div>
-            </Link>
-          </div>
-        </div>
       </section>
       <section className="w-full px-8 pt-10 sm:px-0 sm:pt-24 md:px-0 md:pt-24 xl:px-0 xl:pt-24">
         <div className="flex h-full w-full flex-col items-center pb-[100px] pt-10">

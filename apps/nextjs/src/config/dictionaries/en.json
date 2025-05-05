@@ -34,14 +34,7 @@
     "main_nav_pricing": "Pricing",
     "main_nav_products": "Products",
     "main_nav_blog": "Blog",
-    "login": "Login",
-    "signup": "Sign up",
     "": "",
-    "contributors": {
-      "contributors_desc": "contributors made Saasfly stronger",
-      "developers_first": "Help more than ",
-      "developers_second": " developers"
-    },
     "right_side": {
       "deploy_on_vercel_title": "Deploy on Vercel",
       "deploy_on_vercel_desc": "Get started in seconds, see results instantly.",
@@ -59,16 +52,6 @@
       "payments_desc": "Expand your business globally with our secure, convenient, and efficient payment platform.",
       "nextauth_title": "NextAuth",
       "nextauth_desc": "Empower your app with secure and seamless authentication, creating a frictionless login experience."
-    },
-    "sponsor": {
-      "title": "Loved by our Sponsors",
-      "donate": "Buy us a coffee, Your Brand here"
-    },
-    "video": {
-      "first_text": "Watch a Video, then",
-      "second_text1": "build your App in ",
-      "second_text2": "",
-      "time_text": "1 hour"
     },
     "people_comment": {
       "title": "What People Are Saying",

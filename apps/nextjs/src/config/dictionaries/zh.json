@@ -34,14 +34,7 @@
     "main_nav_pricing": "价格",
     "main_nav_products": "产品",
     "main_nav_blog": "博客",
-    "login": "登录",
-    "signup": "注册",
     "": "",
-    "contributors": {
-      "contributors_desc": "位贡献者使Saasfly更强大了",
-      "developers_first": "帮助了超过 ",
-      "developers_second": " 位开发者"
-    },
     "right_side": {
       "deploy_on_vercel_title": "部署到 Vercel",
       "deploy_on_vercel_desc": "轻松上手，快速看到成果。",
@@ -59,16 +52,6 @@
       "payments_desc": "为您提供安全、便捷、高效的支付解决方案。全球化支持，多种支付方式，灵活定制，让您的业务轻松拓展，畅通无阻。",
       "nextauth_title": "NextAuth",
       "nextauth_desc": "让你的应用拥有安全可靠的身份验证，为用户提供丝滑流畅的登录体验。支持社交登录、邮箱验证以及自定义认证。"
-    },
-    "sponsor": {
-      "title": "我们深受赞助商的喜爱",
-      "donate": "给我们买杯咖啡，您的品牌会出现在这里"
-    },
-    "video": {
-      "first_text": "观看视频，然后",
-      "second_text1": "在 ",
-      "second_text2": "构建你的应用程序",
-      "time_text": "1 小时内"
     },
     "people_comment": {
       "title": "听听大家怎么说",
