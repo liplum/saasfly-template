@@ -2,9 +2,9 @@ import { Suspense } from "react"
 
 import { NavBar } from "@/components/navbar"
 import { SiteFooter } from "@/components/site-footer"
-import type { Locale } from "@/config/i18n-config"
-import { getMarketingConfig } from "@/config/ui/marketing"
-import { getDictionary } from "@/lib/get-dictionary"
+import type { Locale } from "@/i18n/config"
+import { getMarketingConfig } from "@/app/[lang]/(marketing)/config"
+import { getDictionary } from "@/i18n/get-dictionary"
 
 export default async function MarketingLayout({
   children, params,

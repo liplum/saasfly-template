@@ -11,7 +11,7 @@ import {
   DropdownMenuTrigger,
 } from "@/ui/dropdown-menu";
 
-import { i18n, localeMap } from "@/config/i18n-config";
+import { i18n, localeMap } from "@/i18n/config";
 import { IconLanguage } from "@tabler/icons-react"
 
 export function LocaleChange({ url }: { url: string }) {

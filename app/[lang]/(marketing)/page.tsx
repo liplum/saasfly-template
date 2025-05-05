@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { getDictionary } from "@/lib/get-dictionary"
+import { getDictionary } from "@/i18n/get-dictionary"
 
 import { Comments } from "@/components/comments"
 import { FeaturesGrid } from "@/components/features-grid"
@@ -9,7 +9,7 @@ import { BackgroundLines } from "@/ui/background-lines"
 import { Button } from "@/ui/button"
 import { ColourfulText } from "@/ui/colorful-text"
 
-import type { Locale } from "@/config/i18n-config"
+import type { Locale } from "@/i18n/config"
 import { IconArrowRight } from "@tabler/icons-react"
 
 export default async function IndexPage({

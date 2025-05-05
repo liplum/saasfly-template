@@ -7,8 +7,8 @@ import {
   AccordionTrigger,
 } from "@/ui/accordion";
 
-import type { Locale } from "@/config/i18n-config";
-import { priceFaqDataMap } from "@/config/price/price-faq-data";
+import type { Locale } from "@/i18n/config";
+import { priceFaqDataMap } from "@/app/[lang]/(marketing)/pricing/price-faq-data";
 
 export function PricingFaq({
   params: { lang },

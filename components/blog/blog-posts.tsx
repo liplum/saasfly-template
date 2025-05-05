@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Balancer from "react-wrap-balancer";
 
-import { formatDate } from "@/lib/utils";
+import { formatDate } from "@/app/utils";
 
 interface Post {
   _id: string;

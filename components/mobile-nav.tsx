@@ -3,10 +3,10 @@ import Link from "next/link";
 
 import { cn } from "@/ui";
 
-import { siteConfig } from "@/config/site";
+import { siteConfig } from "@/app/site";
 import { useLockBody } from "@/hooks/use-lock-body";
-import type { MainNavItem } from "@/types";
 import { IconCommand } from "@tabler/icons-react"
+import { MainNavItem } from "./main-nav"
 
 interface MobileNavProps {
   items: MainNavItem[];

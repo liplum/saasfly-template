@@ -4,7 +4,7 @@ import { NextResponse } from "next/server"
 import { match as matchLocale } from "@formatjs/intl-localematcher"
 import Negotiator from "negotiator"
 
-import { i18n } from "@/config/i18n-config"
+import { i18n } from "@/i18n/config"
 
 const noNeedProcessRoute = [".*\\.png", ".*\\.jpg", ".*\\.opengraph-image.png"]
 

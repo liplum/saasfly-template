@@ -1,9 +1,9 @@
+import "@/styles/mdx.css"
+
 import { notFound } from "next/navigation"
 import { allAuthors, allPosts } from "contentlayer/generated"
 
 import { Mdx } from "@/components/content/mdx-components"
-
-import "@/styles/mdx.css"
 
 import type { Metadata } from "next"
 import Image from "next/image"
@@ -13,7 +13,7 @@ import Balancer from "react-wrap-balancer"
 import { cn } from "@/ui"
 import { buttonVariants } from "@/ui/button"
 
-import { absoluteUrl, formatDate } from "@/lib/utils"
+import { absoluteUrl, formatDate } from "@/app/utils"
 import { IconChevronLeft } from "@tabler/icons-react"
 
 interface PostPageProps {

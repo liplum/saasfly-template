@@ -1,6 +1,6 @@
 import { MainNavItem } from "@/components/main-nav"
-import type { Locale } from "@/config/i18n-config"
-import { getDictionary } from "@/lib/get-dictionary"
+import type { Locale } from "@/i18n/config"
+import { getDictionary } from "@/i18n/get-dictionary"
 
 export interface MarketingConfig {
   mainNav: MainNavItem[]
