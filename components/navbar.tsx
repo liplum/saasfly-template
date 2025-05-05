@@ -4,7 +4,7 @@ import React from "react"
 import Link from "next/link"
 import { useSelectedLayoutSegment } from "next/navigation"
 
-import { cn } from "@/ui"
+import cn from "@/ui/cn"
 
 import { MainNav, MainNavItem } from "./main-nav"
 import { LocaleSelector } from "@/components/locale-change"
@@ -35,7 +35,7 @@ export function NavBar({
 
   return (
     <header
-      className={`sticky top-0 z-40 flex w-full justify-center border-border bg-background/60 backdrop-blur-xl transition-all ${scroll ? (scrolled ? "border-b" : "bg-background/0") : "border-b"
+      className={`sticky top-0 z-40 flex w-full justify-center border-border backdrop-blur-xl transition-all ${scroll ? (scrolled ? "border-b" : "") : "border-b"
         }`}
     >
       <div className="container flex h-16 items-center justify-between py-4">
@@ -63,8 +63,6 @@ export function NavBar({
               ))}
             </nav>
           ) : null}
-
-          <div className="w-[1px] h-8 bg-accent"></div>
 
           {rightElements}
           <LocaleSelector url={"/"} />

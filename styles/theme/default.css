@@ -14,15 +14,6 @@
   --card: 232, 14%, 98%;
   --card-foreground: 60, 30%, 5%;
 
-  --primary: 265, 89%, 78%;
-  --primary-foreground: 60, 30%, 96%;
-
-  --secondary: 326, 100%, 74%;
-  --secondary-foreground: 60, 30%, 96%;
-
-  --accent: 225, 27%, 70%;
-  --accent-foreground: 60, 30%, 10%;
-
   --destructive: 0, 100%, 67%;
   --destructive-foreground: 60, 30%, 96%;
 
@@ -44,15 +35,6 @@
 
   --card: 232, 14%, 31%;
   --card-foreground: 60, 30%, 96%;
-
-  --primary: 265, 89%, 78%;
-  --primary-foreground: 60, 30%, 96%;
-
-  --secondary: 326, 100%, 74%;
-  --secondary-foreground: 60, 30%, 96%;
-
-  --accent: 225, 27%, 51%;
-  --accent-foreground: 60, 30%, 96%;
 
   --destructive: 0, 100%, 67%;
   --destructive-foreground: 60, 30%, 96%;

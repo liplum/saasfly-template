@@ -5,11 +5,9 @@ import {
 } from "react"
 import Balancer from "react-wrap-balancer"
 
-import { Button } from "@/ui/button"
-
 import { priceDataMap } from "@/app/[lang]/pricing/price-data"
 import { IconCheck, IconX } from "@tabler/icons-react"
-import { Switch } from "@radix-ui/themes"
+import { Button, Switch } from "@radix-ui/themes"
 
 interface PricingCardsProps {
   dict: Record<string, string>
@@ -66,7 +64,7 @@ export function PricingCards({
               className="relative flex flex-col overflow-hidden rounded-xl border"
               key={offer?.title}
             >
-              <div className="min-h-[150px] items-start space-y-4 bg-secondary/70 p-6">
+              <div className="min-h-[150px] items-start space-y-4 p-6">
                 <p className="font-urban flex text-sm font-bold uppercase tracking-wider text-muted-foreground">
                   {offer?.title}
                 </p>
@@ -130,7 +128,7 @@ export function PricingCards({
         <Balancer>
           Email{" "}
           <a
-            className="font-medium text-primary hover:underline"
+            className="font-medium text-blue-600 hover:underline"
             href="mailto:support@saasfly.io"
           >
             support@saasfly.io

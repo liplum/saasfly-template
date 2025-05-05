@@ -1,7 +1,7 @@
 import * as React from "react";
 import Image from "next/image";
 
-import { cn } from "@/ui";
+import cn from "@/ui/cn";
 
 import { ThemeToggle } from "@/components/theme-toggle";
 

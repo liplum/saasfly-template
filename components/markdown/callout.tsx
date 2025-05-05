@@ -1,4 +1,4 @@
-import { cn } from "@/ui";
+import cn from "@/ui/cn";
 
 interface CalloutProps {
   icon?: string;

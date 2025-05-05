@@ -10,8 +10,7 @@ import Image from "next/image"
 import Link from "next/link"
 import Balancer from "react-wrap-balancer"
 
-import { cn } from "@/ui"
-import { buttonVariants } from "@/ui/button"
+import cn from "@/ui/cn"
 
 import { absoluteUrl, formatDate } from "@/app/utils"
 import { IconChevronLeft } from "@tabler/icons-react"
@@ -111,10 +110,7 @@ export default async function PostPage({ params }: {
     <article className="container relative max-w-3xl py-6 lg:py-10">
       <Link
         href="/blog"
-        className={cn(
-          buttonVariants({ variant: "ghost" }),
-          "absolute left-[-200px] top-14 hidden xl:inline-flex",
-        )}
+        className={"absolute left-[-200px] top-14 hidden xl:inline-flex"}
       >
         <IconChevronLeft className="mr-2 h-4 w-4" />
         {i18n.blog.seeAllPosts}
@@ -172,7 +168,7 @@ export default async function PostPage({ params }: {
       <Mdx code={post.body.code} />
       <hr className="mt-12" />
       <div className="flex justify-center py-6 lg:py-10">
-        <Link href="/blog" className={cn(buttonVariants({ variant: "ghost" }))}>
+        <Link href="/blog">
           <IconChevronLeft className="mr-2 h-4 w-4" />
           {i18n.blog.seeAllPosts}
         </Link>

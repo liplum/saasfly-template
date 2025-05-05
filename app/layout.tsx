@@ -4,8 +4,8 @@ import "@radix-ui/themes/styles.css";
 import { Inter as FontSans } from "next/font/google"
 import localFont from "next/font/local"
 
-import { cn } from "@/ui"
-import { Toaster } from "@/ui/toaster"
+import cn from "@/ui/cn"
+import { Toaster } from "@/ui/toast/toaster"
 
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme-provider"
@@ -76,7 +76,7 @@ export default function RootLayout({
       <head />
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased",
+          "min-h-screen font-sans antialiased",
           fontSans.variable,
           fontHeading.variable,
         )}

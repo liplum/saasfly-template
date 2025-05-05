@@ -1,7 +1,7 @@
 import * as React from "react";
 import Link from "next/link";
 
-import { cn } from "@/ui";
+import cn from "@/ui/cn";
 
 import { siteConfig } from "@/app/site";
 import { useLockBody } from "@/hooks/use-lock-body";

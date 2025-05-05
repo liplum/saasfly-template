@@ -9,10 +9,8 @@ import { SegmentedControl } from "@radix-ui/themes"
 export function ThemeToggle() {
   const { theme, setTheme } = useTheme()
 
-  console.log(theme)
-
   return (
-    <SegmentedControl.Root defaultValue={theme}>
+    <SegmentedControl.Root defaultValue={theme ?? "system"}>
       <SegmentedControl.Item value="light" onClick={() => setTheme("light")}>
         <IconSun className="h-4" />
       </SegmentedControl.Item>
