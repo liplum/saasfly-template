@@ -87,7 +87,6 @@
   },
   "exports": {
     ".": "./src/index.ts",
-    "./3d-card": "./src/3d-card.tsx",
     "./accordion": "./src/accordion.tsx",
     "./alert-dialog": "./src/alert-dialog.tsx",
     "./alert": "./src/alert.tsx",
