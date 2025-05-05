@@ -1,31 +1,29 @@
-import { Inter as FontSans } from "next/font/google";
-import localFont from "next/font/local";
+import { Inter as FontSans } from "next/font/google"
+import localFont from "next/font/local"
 
-import "./globals.css";
+import "./globals.css"
 
-import { NextDevtoolsProvider } from "@next-devtools/core";
+import { cn } from "@/ui"
+import { Toaster } from "@/ui/toaster"
 
-import { cn } from "@/ui";
-import { Toaster } from "@/ui/toaster";
-
-import { TailwindIndicator } from "@/components/tailwind-indicator";
-import { ThemeProvider } from "@/components/theme-provider";
-import { i18n } from "@/config/i18n-config";
-import { siteConfig } from "@/config/site";
+import { TailwindIndicator } from "@/components/tailwind-indicator"
+import { ThemeProvider } from "@/components/theme-provider"
+import { i18n } from "@/config/i18n-config"
+import { siteConfig } from "@/config/site"
 
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
-});
+})
 
 // Font files can be colocated inside of `pages`
 const fontHeading = localFont({
   src: "../styles/fonts/CalSans-SemiBold.woff2",
   variable: "--font-heading",
-});
+})
 
 export function generateStaticParams() {
-  return i18n.locales.map((locale) => ({ lang: locale }));
+  return i18n.locales.map((locale) => ({ lang: locale }))
 }
 
 export const metadata = {
@@ -64,12 +62,12 @@ export const metadata = {
   },
   metadataBase: new URL("https://show.saasfly.io/"),
   // manifest: `${siteConfig.url}/site.webmanifest`,
-};
+}
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
@@ -86,11 +84,11 @@ export default function RootLayout({
           defaultTheme="dark"
           enableSystem={false}
         >
-          <NextDevtoolsProvider>{children}</NextDevtoolsProvider>
+          {children}
           <Toaster />
           <TailwindIndicator />
         </ThemeProvider>
       </body>
     </html>
-  );
+  )
 }

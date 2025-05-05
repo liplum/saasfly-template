@@ -40,12 +40,6 @@
     "@radix-ui/react-toggle": "next",
     "@radix-ui/react-toggle-group": "next",
     "@radix-ui/react-tooltip": "next",
-    "@react-email/button": "0.0.15",
-    "@react-email/components": "0.0.19",
-    "@react-email/html": "0.0.8",
-    "@tsparticles/engine": "3.3.0",
-    "@tsparticles/react": "3.0.0",
-    "@tsparticles/slim": "3.3.0",
     "class-variance-authority": "0.7.0",
     "clsx": "2.1.0",
     "date-fns": "3.3.1",
@@ -62,7 +56,6 @@
     "vaul": "0.9.0"
   },
   "devDependencies": {
-    "@next-devtools/core": "0.2.0",
     "@types/mdx": "2.0.10",
     "@types/negotiator": "0.6.3",
     "@types/node": "^20",

@@ -1,50 +1,55 @@
-import { notFound } from "next/navigation";
-import { allAuthors, allPosts } from "contentlayer/generated";
+import { notFound } from "next/navigation"
+import { allAuthors, allPosts } from "contentlayer/generated"
 
-import { Mdx } from "@/components/content/mdx-components";
+import { Mdx } from "@/components/content/mdx-components"
 
-import "@/styles/mdx.css";
+import "@/styles/mdx.css"
 
-import type { Metadata } from "next";
-import Image from "next/image";
-import Link from "next/link";
-import Balancer from "react-wrap-balancer";
+import type { Metadata } from "next"
+import Image from "next/image"
+import Link from "next/link"
+import Balancer from "react-wrap-balancer"
 
-import { cn } from "@/ui";
-import { buttonVariants } from "@/ui/button";
-import * as Icons from "@/ui/icons";
+import { cn } from "@/ui"
+import { buttonVariants } from "@/ui/button"
+import * as Icons from "@/ui/icons"
 
-import { absoluteUrl, formatDate } from "@/lib/utils";
+import { absoluteUrl, formatDate } from "@/lib/utils"
 
 interface PostPageProps {
   params: {
-    slug: string[];
-  };
+    slug: string[]
+  }
 }
 
 function getPostFromParams(params: { slug?: string | string[] }) {
-  const slug = Array.isArray(params.slug) ? params.slug.join("/") : params.slug;
-  const post = allPosts.find((post) => post.slugAsParams === slug);
+  const slug = Array.isArray(params.slug) ? params.slug.join("/") : params.slug
+  const post = allPosts.find((post) => post.slugAsParams === slug)
 
   if (!post) {
-    null;
+    null
   }
 
-  return post;
+  return post
 }
 
-export function generateMetadata({ params }: PostPageProps): Metadata {
-  const post = getPostFromParams(params);
+export async function generateMetadata({ params }: {
+  params: Promise<{
+    slug: string[]
+  }>
+}): Promise<Metadata> {
+  const _params = await params
+  const post = getPostFromParams(_params)
   if (!post) {
-    return {};
+    return {}
   }
 
-  const url = process.env.NEXT_PUBLIC_APP_URL;
+  const url = process.env.NEXT_PUBLIC_APP_URL
 
-  const ogUrl = new URL(`${url}/api/og`);
-  ogUrl.searchParams.set("heading", post.title);
-  ogUrl.searchParams.set("type", "Blog Post");
-  ogUrl.searchParams.set("mode", "dark");
+  const ogUrl = new URL(`${url}/api/og`)
+  ogUrl.searchParams.set("heading", post.title)
+  ogUrl.searchParams.set("type", "Blog Post")
+  ogUrl.searchParams.set("mode", "dark")
 
   return {
     title: post.title,
@@ -72,25 +77,30 @@ export function generateMetadata({ params }: PostPageProps): Metadata {
       description: post.description,
       images: [ogUrl.toString()],
     },
-  };
+  }
 }
 
 export function generateStaticParams(): PostPageProps["params"][] {
   return allPosts.map((post) => ({
     slug: post.slugAsParams.split("/"),
-  }));
+  }))
 }
 
-export default function PostPage({ params }: PostPageProps) {
-  const post = getPostFromParams(params);
+export default async function PostPage({ params }: {
+  params: Promise<{
+    slug: string[]
+  }>
+}) {
+  const _params = await params
+  const post = getPostFromParams(_params)
 
   if (!post) {
-    notFound();
+    notFound()
   }
 
   const authors = post.authors.map((author) =>
     allAuthors.find(({ slug }) => slug === `/authors/${author}`),
-  );
+  )
 
   return (
     <article className="container relative max-w-3xl py-6 lg:py-10">
@@ -163,5 +173,5 @@ export default function PostPage({ params }: PostPageProps) {
         </Link>
       </div>
     </article>
-  );
+  )
 }
