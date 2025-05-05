@@ -132,11 +132,11 @@ export default async function PostPage({ params }: {
               author ? (
                 <Link
                   key={author._id}
-                  href={`https://twitter.com/${author.twitter}`}
+                  href={author.link}
                   className="flex items-center space-x-2 text-sm"
                 >
                   <Image
-                    src={author.avatar}
+                    src={author.avatarUrl}
                     alt={author.title}
                     width={42}
                     height={42}
@@ -144,9 +144,9 @@ export default async function PostPage({ params }: {
                   />
                   <div className="flex-1 text-left leading-tight">
                     <p className="font-medium">{author.title}</p>
-                    <p className="text-[12px] text-muted-foreground">
-                      @{author.twitter}
-                    </p>
+                    {author.description && <p className="text-[12px] text-muted-foreground">
+                      {author.description}
+                    </p>}
                   </div>
                 </Link>
               ) : null,

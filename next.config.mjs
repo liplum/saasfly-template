@@ -12,7 +12,7 @@ const config = {
     // serverActions: true,
   },
   images: {
-    domains: [],
+    domains: ["avatars.githubusercontent.com"],
   },
   output: "standalone",
 };
