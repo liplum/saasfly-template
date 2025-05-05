@@ -1,20 +1,19 @@
-import Link from "next/link";
-import Image from "next/image";
-import { getDictionary } from "~/lib/get-dictionary";
+import Link from "next/link"
+import Image from "next/image"
+import { getDictionary } from "~/lib/get-dictionary"
 
-import { CodeCopy } from "~/components/code-copy";
-import { Comments } from "~/components/comments";
-import { FeaturesGrid } from "~/components/features-grid";
-import { RightsideMarketing } from "~/components/rightside-marketing";
+import { CodeCopy } from "~/components/code-copy"
+import { Comments } from "~/components/comments"
+import { FeaturesGrid } from "~/components/features-grid"
+import { RightsideMarketing } from "~/components/rightside-marketing"
 
-import { AnimatedTooltip } from "@saasfly/ui/animated-tooltip";
-import { BackgroundLines } from "@saasfly/ui/background-lines";
-import { Button } from "@saasfly/ui/button";
-import { ColourfulText } from "@saasfly/ui/colorful-text";
-import * as Icons from "@saasfly/ui/icons";
+import { AnimatedTooltip } from "@saasfly/ui/animated-tooltip"
+import { BackgroundLines } from "@saasfly/ui/background-lines"
+import { Button } from "@saasfly/ui/button"
+import { ColourfulText } from "@saasfly/ui/colorful-text"
+import * as Icons from "@saasfly/ui/icons"
 
-import type { Locale } from "~/config/i18n-config";
-import {VideoScroll} from "~/components/video-scroll";
+import type { Locale } from "~/config/i18n-config"
 
 const people = [
   {
@@ -55,16 +54,16 @@ const people = [
     designation: "Indie Developer",
     image: "https://avatars.githubusercontent.com/u/41265413",
   },
-];
+]
 
 export default async function IndexPage({
   params: { lang },
 }: {
   params: {
-    lang: Locale;
-  };
+    lang: Locale
+  }
 }) {
-  const dict = await getDictionary(lang);
+  const dict = await getDictionary(lang)
 
   return (
     <>
@@ -77,7 +76,7 @@ export default async function IndexPage({
                   <div
                     className="mb-6 max-w-4xl text-left text-4xl font-semibold dark:text-zinc-100 md:text-5xl xl:text-5xl md:leading-[4rem] xl:leading-[4rem]">
                     {dict.marketing.title || "Ship your apps to the world easier with "}
-                    <ColourfulText text="Saasfly"/>
+                    <ColourfulText text="Saasfly" />
                   </div>
                 </div>
 
@@ -93,16 +92,16 @@ export default async function IndexPage({
                     <Button
                       className="bg-blue-600 hover:bg-blue-500 text-white rounded-full text-lg px-6 h-12 font-medium">
                       {dict.marketing.get_started}
-                      <Icons.ArrowRight className="h-5 w-5"/>
+                      <Icons.ArrowRight className="h-5 w-5" />
                     </Button>
                   </Link>
 
-                  <CodeCopy/>
+                  <CodeCopy />
                 </div>
 
                 <div className="flex xl:flex-row flex-col items-center justify-start mt-4 w-full">
                   <div className="flex">
-                    <AnimatedTooltip items={people}/>
+                    <AnimatedTooltip items={people} />
                   </div>
                   <div className="flex flex-col items-center justify-start ml-8">
                     <div className="w-[340px]">
@@ -113,7 +112,7 @@ export default async function IndexPage({
                     <div className="w-[340px]">
                       <text
                         className="text-neutral-500 dark:text-neutral-400">{dict.marketing.contributors.developers_first}</text>
-                      <ColourfulText text="2000"/>
+                      <ColourfulText text="2000" />
                       <text
                         className="text-neutral-500 dark:text-neutral-400">{dict.marketing.contributors.developers_second}</text>
                     </div>
@@ -125,14 +124,14 @@ export default async function IndexPage({
 
           <div className="hidden h-full w-full xl:block bg-background">
             <div className="flex flex-col pt-44">
-              <RightsideMarketing dict={dict.marketing.right_side}/>
+              <RightsideMarketing dict={dict.marketing.right_side} />
             </div>
           </div>
         </div>
       </section>
 
       <section className="container mt-8 md:mt-[-180px] xl:mt-[-180px]">
-        <FeaturesGrid dict={dict.marketing.features_grid}/>
+        <FeaturesGrid dict={dict.marketing.features_grid} />
       </section>
 
       <section className="container pt-24">
@@ -140,7 +139,7 @@ export default async function IndexPage({
           <div className="text-lg text-neutral-500 dark:text-neutral-400">{dict.marketing.sponsor.title}</div>
           <div className="mt-4 flex items-center gap-4">
             <Link href="https://www.twillot.com/" target="_blank">
-              <Image src="https://www.twillot.com/logo-128.png" width="48" height="48" alt="twillot"/>
+              <Image src="https://www.twillot.com/logo-128.png" width="48" height="48" alt="twillot" />
             </Link>
             <Link href="https://www.setupyourpay.com/" target="_blank">
               <Image src="https://www.setupyourpay.com/logo.png" width="48" height="48" alt="setupyourpay" />
@@ -154,11 +153,6 @@ export default async function IndexPage({
           </div>
         </div>
       </section>
-
-      <section className="container pt-8">
-        <VideoScroll dict={dict.marketing.video}/>
-      </section>
-
       <section className="w-full px-8 pt-10 sm:px-0 sm:pt-24 md:px-0 md:pt-24 xl:px-0 xl:pt-24">
         <div className="flex h-full w-full flex-col items-center pb-[100px] pt-10">
           <div>
@@ -171,10 +165,10 @@ export default async function IndexPage({
           </div>
 
           <div className="w-full overflow-x-hidden">
-            <Comments/>
+            <Comments />
           </div>
         </div>
       </section>
     </>
-  );
+  )
 }
