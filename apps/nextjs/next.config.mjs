@@ -1,6 +1,5 @@
 // @ts-check
 import "./src/env.mjs";
-import "@saasfly/auth/env.mjs";
 
 import { withNextDevtools } from "@next-devtools/core/plugin";
 // import "@saasfly/api/env"
@@ -13,12 +12,8 @@ const config = {
   reactStrictMode: true,
   /** Enables hot reloading for local packages without a build step */
   transpilePackages: [
-    "@saasfly/api",
-    "@saasfly/auth",
-    "@saasfly/db",
     "@saasfly/common",
     "@saasfly/ui",
-    "@saasfly/stripe",
   ],
   pageExtensions: ["ts", "tsx", "mdx"],
   experimental: {
