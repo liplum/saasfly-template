@@ -5,7 +5,7 @@ import { getDictionary } from "~/lib/get-dictionary"
 import { CodeCopy } from "~/components/code-copy"
 import { Comments } from "~/components/comments"
 import { FeaturesGrid } from "~/components/features-grid"
-import { RightsideMarketing } from "~/components/rightside-marketing"
+import { RightSideMarketing } from "~/components/right-side-marketing"
 
 import { AnimatedTooltip } from "@saasfly/ui/animated-tooltip"
 import { BackgroundLines } from "@saasfly/ui/background-lines"
@@ -103,7 +103,7 @@ export default async function IndexPage({
 
           <div className="hidden h-full w-full xl:block bg-background">
             <div className="flex flex-col pt-44">
-              <RightsideMarketing dict={dict.marketing.right_side} />
+              <RightSideMarketing dict={dict.marketing.right_side} />
             </div>
           </div>
         </div>

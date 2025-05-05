@@ -5,7 +5,7 @@ import Link from "next/link";
 import { GlowingEffect } from "@saasfly/ui/glowing-effect";
 import * as Icons from "@saasfly/ui/icons";
 
-export function RightsideMarketing({ dict } : { dict: Record<string, string> | undefined }) {
+export function RightSideMarketing({ dict } : { dict: Record<string, string> | undefined }) {
   return (
     <ul className="grid grid-cols-1 grid-rows-none gap-4 md:grid-cols-12 md:grid-rows-2 lg:gap-4 xl:max-h-[34rem] xl:grid-rows-2">
       <GridItem
