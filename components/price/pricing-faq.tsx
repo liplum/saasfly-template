@@ -8,7 +8,7 @@ import {
 } from "@/ui/accordion";
 
 import type { Locale } from "@/i18n/config";
-import { priceFaqDataMap } from "@/app/[lang]/(marketing)/pricing/price-faq-data";
+import { priceFaqDataMap } from "@/app/[lang]/pricing/price-faq-data";
 
 export function PricingFaq({
   params: { lang },
