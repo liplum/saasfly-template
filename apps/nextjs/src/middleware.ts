@@ -8,7 +8,7 @@ import { i18n } from "~/config/i18n-config"
 
 const noNeedProcessRoute = [".*\\.png", ".*\\.jpg", ".*\\.opengraph-image.png"]
 
-const noRedirectRoute = ["/api(.*)", "/trpc(.*)"]
+const noRedirectRoute = ["/api(.*)"]
 
 const publicRoute = [
   "/(\\w{2}/)?terms(.*)",
