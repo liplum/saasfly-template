@@ -1,7 +1,6 @@
 import Link from "next/link"
 import { getDictionary } from "~/lib/get-dictionary"
 
-import { CodeCopy } from "~/components/code-copy"
 import { Comments } from "~/components/comments"
 import { FeaturesGrid } from "~/components/features-grid"
 import { RightSideMarketing } from "~/components/right-side-marketing"
@@ -53,7 +52,6 @@ export default async function IndexPage({
                       <Icons.ArrowRight className="h-5 w-5" />
                     </Button>
                   </Link>
-                  <CodeCopy />
                 </div>
               </div>
             </BackgroundLines>
