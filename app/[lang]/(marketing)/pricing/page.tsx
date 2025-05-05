@@ -1,7 +1,7 @@
 import { PricingCards } from "@/components/price/pricing-cards"
 import { PricingFaq } from "@/components/price/pricing-faq"
 import type { Locale } from "@/i18n/config"
-import { getDictionary } from "@/i18n/get"
+import { useI18n } from "@/i18n/get"
 
 export const metadata = {
   title: "Pricing",
@@ -15,7 +15,7 @@ export default async function PricingPage({
   }>
 }) {
   const { lang } = await params
-  const dict = await getDictionary(lang)
+  const dict = await useI18n(lang)
   return (
     <div className="flex w-full flex-col gap-16 py-8 md:py-8">
       <PricingCards

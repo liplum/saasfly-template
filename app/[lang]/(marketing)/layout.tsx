@@ -4,7 +4,7 @@ import { NavBar } from "@/components/navbar"
 import { SiteFooter } from "@/components/site-footer"
 import type { Locale } from "@/i18n/config"
 import { getMarketingConfig } from "@/app/[lang]/(marketing)/config"
-import { getDictionary } from "@/i18n/get"
+import { useI18n } from "@/i18n/get"
 
 export default async function MarketingLayout({
   children, params,
@@ -15,7 +15,7 @@ export default async function MarketingLayout({
   }>
 }) {
   const { lang } = await params
-  const dict = await getDictionary(lang)
+  const dict = await useI18n(lang)
   return (
     <div className="flex min-h-screen flex-col">
       <Suspense fallback="...">

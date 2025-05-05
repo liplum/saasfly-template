@@ -53,5 +53,11 @@
   },
   "common": {
     "copyright": "版权所有 © ${currentYear} Nextify公司。保留所有权利。"
+  },
+  "blog": {
+    "lastPost": "最新文章",
+    "blogPosts": "博客文章",
+    "seeAllPosts": "查看所有文章",
+    "publishedOn": "发布于 ${date}"
   }
 }

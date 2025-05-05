@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { getDictionary } from "@/i18n/get"
+import { useI18n } from "@/i18n/get"
 
 import { Comments } from "@/components/comments"
 import { FeaturesGrid } from "@/components/features-grid"
@@ -20,7 +20,7 @@ export default async function IndexPage({
   }>
 }) {
   const { lang } = await params
-  const dict = await getDictionary(lang)
+  const dict = await useI18n(lang)
 
   return (
     <>

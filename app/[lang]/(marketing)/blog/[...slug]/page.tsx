@@ -3,7 +3,7 @@ import "@/styles/mdx.css"
 import { notFound } from "next/navigation"
 import { allAuthors, allPosts } from "contentlayer/generated"
 
-import { Mdx } from "@/components/content/mdx-components"
+import { Mdx } from "@/components/markdown/mdx-components"
 
 import type { Metadata } from "next"
 import Image from "next/image"
@@ -15,6 +15,8 @@ import { buttonVariants } from "@/ui/button"
 
 import { absoluteUrl, formatDate } from "@/app/utils"
 import { IconChevronLeft } from "@tabler/icons-react"
+import { Locale } from "@/i18n/config"
+import { useI18n } from "@/i18n/get"
 
 interface PostPageProps {
   params: {
@@ -36,6 +38,7 @@ function getPostFromParams(params: { slug?: string | string[] }) {
 export async function generateMetadata({ params }: {
   params: Promise<{
     slug: string[]
+    lang: Locale
   }>
 }): Promise<Metadata> {
   const _params = await params
@@ -89,9 +92,11 @@ export function generateStaticParams(): PostPageProps["params"][] {
 export default async function PostPage({ params }: {
   params: Promise<{
     slug: string[]
+    lang: Locale
   }>
 }) {
   const _params = await params
+  const i18n = await useI18n(_params.lang)
   const post = getPostFromParams(_params)
 
   if (!post) {
@@ -112,7 +117,7 @@ export default async function PostPage({ params }: {
         )}
       >
         <IconChevronLeft className="mr-2 h-4 w-4" />
-        See all posts
+        {i18n.blog.seeAllPosts}
       </Link>
       <div>
         {post.date && (
@@ -120,7 +125,7 @@ export default async function PostPage({ params }: {
             dateTime={post.date}
             className="block text-sm text-muted-foreground"
           >
-            Published on {formatDate(post.date)}
+            {i18n.blog.publishedOn.replace("${date}", formatDate(post.date))}
           </time>
         )}
         <h1 className="font-heading mt-2 inline-block text-4xl leading-tight lg:text-5xl">
@@ -169,7 +174,7 @@ export default async function PostPage({ params }: {
       <div className="flex justify-center py-6 lg:py-10">
         <Link href="/blog" className={cn(buttonVariants({ variant: "ghost" }))}>
           <IconChevronLeft className="mr-2 h-4 w-4" />
-          See all posts
+          {i18n.blog.seeAllPosts}
         </Link>
       </div>
     </article>

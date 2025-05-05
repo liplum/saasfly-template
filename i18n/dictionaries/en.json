@@ -53,5 +53,11 @@
   },
   "common": {
     "copyright": "Copyright © ${currentYear} Nextify Limited. All rights reserved."
+  },
+  "blog": {
+    "lastPost": "Last Post",
+    "blogPosts": "Blog Posts",
+    "seeAllPosts": "See all posts",
+    "publishedOn": "Published on ${date}"
   }
 }

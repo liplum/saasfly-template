@@ -1,6 +1,6 @@
 import { MainNavItem } from "@/components/main-nav"
 import type { Locale } from "@/i18n/config"
-import { getDictionary } from "@/i18n/get"
+import { useI18n } from "@/i18n/get"
 
 export interface MarketingConfig {
   mainNav: MainNavItem[]
@@ -13,7 +13,7 @@ export const getMarketingConfig = async ({
     lang: Locale
   }
 }): Promise<MarketingConfig> => {
-  const dict = await getDictionary(lang)
+  const dict = await useI18n(lang)
   return {
     mainNav: [
       {
