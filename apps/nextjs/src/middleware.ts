@@ -11,10 +11,8 @@ const noNeedProcessRoute = [".*\\.png", ".*\\.jpg", ".*\\.opengraph-image.png"]
 const noRedirectRoute = ["/api(.*)", "/trpc(.*)"]
 
 const publicRoute = [
-  "/(\\w{2}/)?signin(.*)",
   "/(\\w{2}/)?terms(.*)",
   "/(\\w{2}/)?privacy(.*)",
-  "/(\\w{2}/)?docs(.*)",
   "/(\\w{2}/)?blog(.*)",
   "/(\\w{2}/)?pricing(.*)",
   "^/\\w{2}$", // root with locale
