@@ -21,7 +21,6 @@ interface NavBarProps {
     lang: string
   }
   marketing: Record<string, unknown>
-  dropdown: Record<string, string>
 }
 
 export function NavBar({
