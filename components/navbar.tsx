@@ -4,10 +4,10 @@ import React from "react"
 import Link from "next/link"
 import { useSelectedLayoutSegment } from "next/navigation"
 
-import cn from "@/ui/cn"
+import cn from "@/components/cn"
 
-import { MainNav, MainNavItem } from "./main-nav"
-import { LocaleSelector } from "@/components/locale-change"
+import { MainNav, MainNavItem } from "../app/[lang]/main-nav"
+import { LocaleSelector } from "@/app/[lang]/locale-change"
 
 import useScroll from "@/hooks/use-scroll"
 

@@ -1,8 +1,8 @@
 import { ReactNode } from "react";
 import { IconChevronRight } from "@tabler/icons-react";
 
-import cn from "@/ui/cn";
-import { AnimatedGradientText } from "@/ui/animated-gradient-text";
+import cn from "@/components/cn";
+import { AnimatedGradientText } from "@/components/animated-gradient-text";
 
 export function ReadMoreGuide({ children }: { children: ReactNode }) {
   return (

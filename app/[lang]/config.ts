@@ -1,4 +1,4 @@
-import { MainNavItem } from "@/components/main-nav"
+import { MainNavItem } from "@/app/[lang]/main-nav"
 import type { Locale } from "@/i18n"
 import { useI18n } from "@/i18n/server"
 

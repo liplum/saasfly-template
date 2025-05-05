@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import cn from "@/ui/cn"
+import cn from "@/components/cn"
 
 function AnimatedGradientText({
   children,

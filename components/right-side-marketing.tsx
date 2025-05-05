@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 
-import { GlowingEffect } from "@/ui/glowing-effect"
+import { GlowingEffect } from "@/components/glowing-effect"
 import { IconRocket, IconCloud, IconThumbUp } from "@tabler/icons-react"
 
 export function RightSideMarketing({ dict }: { dict: Record<string, string> | undefined }) {

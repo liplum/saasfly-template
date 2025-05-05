@@ -5,7 +5,7 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/ui/accordion";
+} from "@/components/accordion";
 
 import type { Locale } from "@/i18n";
 import { priceFaqDataMap } from "@/app/[lang]/pricing/price-faq-data";

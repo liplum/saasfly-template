@@ -1,5 +1,5 @@
-import { PricingCards } from "@/components/price/pricing-cards"
-import { PricingFaq } from "@/components/price/pricing-faq"
+import { PricingCards } from "@/app/[lang]/pricing/pricing-cards"
+import { PricingFaq } from "@/app/[lang]/pricing/pricing-faq"
 import type { Locale } from "@/i18n"
 import { useI18n } from "@/i18n/server"
 

@@ -10,7 +10,7 @@ import Image from "next/image"
 import Link from "next/link"
 import Balancer from "react-wrap-balancer"
 
-import cn from "@/ui/cn"
+import cn from "@/components/cn"
 
 import { absoluteUrl, formatDate } from "@/app/utils"
 import { IconChevronLeft } from "@tabler/icons-react"

@@ -1,5 +1,5 @@
-import cn from "@/ui/cn";
-import Marquee from "@/ui/marquee";
+import cn from "@/components/cn";
+import Marquee from "@/components/marquee";
 
 const reviews = [
   {

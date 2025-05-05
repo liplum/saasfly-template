@@ -1,12 +1,12 @@
 import Link from "next/link"
 import { useI18n } from "@/i18n/server"
 
-import { Comments } from "@/components/comments"
-import { FeaturesGrid } from "@/components/features-grid"
+import { Comments } from "@/app/[lang]/comments"
+import { FeaturesGrid } from "@/app/[lang]/features-grid"
 import { RightSideMarketing } from "@/components/right-side-marketing"
 
-import { BackgroundLines } from "@/ui/background-lines"
-import { ColourfulText } from "@/ui/colorful-text"
+import { BackgroundLines } from "@/components/background-lines"
+import { ColourfulText } from "@/components/colorful-text"
 
 import type { Locale } from "@/i18n"
 import { IconArrowRight } from "@tabler/icons-react"
