@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { ChevronRight } from "lucide-react";
+import { IconChevronRight } from "@tabler/icons-react";
 
 import { cn } from "@/ui";
 import { AnimatedGradientText } from "@/ui/animated-gradient-text";
@@ -15,7 +15,7 @@ export function DocumentGuide({ children }: { children: ReactNode }) {
       >
         {children}
       </span>
-      <ChevronRight className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
+      <IconChevronRight className="ml-1 size-3 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
     </AnimatedGradientText>
   );
 }

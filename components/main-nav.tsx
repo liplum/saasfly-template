@@ -3,11 +3,11 @@
 import React from "react";
 import Link from "next/link";
 
-import * as Icons from "@/ui/icons";
 import { DocumentGuide } from "@/components/document-guide";
 import { MobileNav } from "@/components/mobile-nav";
 
 import type { MainNavItem } from "@/types";
+import { IconCommand, IconX } from "@tabler/icons-react"
 
 interface MainNavProps {
   items?: MainNavItem[];
@@ -44,7 +44,7 @@ export function MainNav({ items, children, params: { lang }, marketing }: MainNa
         className="flex items-center space-x-2 md:hidden"
         onClick={() => setShowMobileMenu(!showMobileMenu)}
       >
-        {showMobileMenu ? <Icons.Close/> : <Icons.Logo/>}
+        {showMobileMenu ? <IconX/> : <IconCommand/>}
         <span className="font-bold">Menu</span>
       </button>
       {showMobileMenu && items && (

@@ -1,4 +1,4 @@
-import type * as Lucide from "lucide-react";
+import type * as Lucide from "@tabler/icons-react";
 
 import type { Customer } from "@saasfly/db";
 

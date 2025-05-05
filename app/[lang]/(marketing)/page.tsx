@@ -8,9 +8,9 @@ import { RightSideMarketing } from "@/components/right-side-marketing"
 import { BackgroundLines } from "@/ui/background-lines"
 import { Button } from "@/ui/button"
 import { ColourfulText } from "@/ui/colorful-text"
-import * as Icons from "@/ui/icons"
 
 import type { Locale } from "@/config/i18n-config"
+import { IconArrowRight } from "@tabler/icons-react"
 
 export default async function IndexPage({
   params,
@@ -49,7 +49,7 @@ export default async function IndexPage({
                     <Button
                       className="bg-blue-600 hover:bg-blue-500 text-white rounded-full text-lg px-6 h-12 font-medium">
                       {dict.marketing.get_started}
-                      <Icons.ArrowRight className="h-5 w-5" />
+                      <IconArrowRight className="h-5 w-5" />
                     </Button>
                   </Link>
                 </div>

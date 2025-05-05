@@ -3,9 +3,9 @@
 import { useTransition } from "react";
 
 import { Button } from "@/ui/button";
-import * as Icons from "@/ui/icons";
 
 import type { SubscriptionPlan, UserSubscriptionPlan } from "@/types";
+import { IconLoader } from "@tabler/icons-react"
 
 interface BillingFormButtonProps {
   offer: SubscriptionPlan;
@@ -30,7 +30,7 @@ export function BillingFormButton({
     >
       {isPending ? (
         <>
-          <Icons.Spinner className="mr-2 h-4 w-4 animate-spin" /> Loading...
+          <IconLoader className="mr-2 h-4 w-4 animate-spin" /> Loading...
         </>
       ) : (
         <>

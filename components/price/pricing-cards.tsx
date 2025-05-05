@@ -1,23 +1,18 @@
 "use client"
 
 import {
-  JSXElementConstructor,
-  Key,
-  PromiseLikeOfReactNode,
-  ReactElement,
-  ReactNode,
   useState,
 } from "react"
 import Link from "next/link"
 import Balancer from "react-wrap-balancer"
 
 import { Button, buttonVariants } from "@/ui/button"
-import * as Icons from "@/ui/icons"
 import { Switch } from "@/ui/switch"
 
 import { BillingFormButton } from "@/components/price/billing-form-button"
 import { priceDataMap } from "@/config/price/price-data"
 import { UserSubscriptionPlan } from "@/types"
+import { IconCheck, IconX } from "@tabler/icons-react"
 
 interface PricingCardsProps {
   userId?: string
@@ -65,24 +60,9 @@ export function PricingCards({
       <div className="mx-auto grid max-w-screen-lg gap-5 bg-inherit py-5 md:grid-cols-3 lg:grid-cols-3">
         {pricingData.map(
           (offer: {
-            title:
-            | boolean
-            | Key
-            | ReactElement<any, string | JSXElementConstructor<any>>
-            | Iterable<ReactNode>
-            | PromiseLikeOfReactNode
-            | null
-            | undefined
+            title: string
             prices: {
-              monthly:
-              | string
-              | number
-              | boolean
-              | ReactElement<any, string | JSXElementConstructor<any>>
-              | Iterable<ReactNode>
-              | PromiseLikeOfReactNode
-              | null
-              | undefined
+              monthly: number
               yearly: number
             }
             benefits: any[]
@@ -130,7 +110,7 @@ export function PricingCards({
                 <ul className="space-y-2 text-left text-sm font-medium leading-normal">
                   {offer?.benefits.map((feature) => (
                     <li className="flex items-start" key={feature}>
-                      <Icons.Check className="mr-3 h-5 w-5 shrink-0" />
+                      <IconCheck className="mr-3 h-5 w-5 shrink-0" />
                       <p>{feature}</p>
                     </li>
                   ))}
@@ -141,7 +121,7 @@ export function PricingCards({
                         className="flex items-start text-muted-foreground"
                         key={feature}
                       >
-                        <Icons.Close className="mr-3 h-5 w-5 shrink-0" />
+                        <IconX className="mr-3 h-5 w-5 shrink-0" />
                         <p>{feature}</p>
                       </li>
                     ))}

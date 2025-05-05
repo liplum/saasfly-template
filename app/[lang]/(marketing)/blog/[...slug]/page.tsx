@@ -12,9 +12,9 @@ import Balancer from "react-wrap-balancer"
 
 import { cn } from "@/ui"
 import { buttonVariants } from "@/ui/button"
-import * as Icons from "@/ui/icons"
 
 import { absoluteUrl, formatDate } from "@/lib/utils"
+import { IconChevronLeft } from "@tabler/icons-react"
 
 interface PostPageProps {
   params: {
@@ -111,7 +111,7 @@ export default async function PostPage({ params }: {
           "absolute left-[-200px] top-14 hidden xl:inline-flex",
         )}
       >
-        <Icons.ChevronLeft className="mr-2 h-4 w-4" />
+        <IconChevronLeft className="mr-2 h-4 w-4" />
         See all posts
       </Link>
       <div>
@@ -168,7 +168,7 @@ export default async function PostPage({ params }: {
       <hr className="mt-12" />
       <div className="flex justify-center py-6 lg:py-10">
         <Link href="/blog" className={cn(buttonVariants({ variant: "ghost" }))}>
-          <Icons.ChevronLeft className="mr-2 h-4 w-4" />
+          <IconChevronLeft className="mr-2 h-4 w-4" />
           See all posts
         </Link>
       </div>

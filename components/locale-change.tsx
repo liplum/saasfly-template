@@ -10,9 +10,9 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/ui/dropdown-menu";
-import * as Icons from "@/ui/icons";
 
 import { i18n, localeMap } from "@/config/i18n-config";
+import { IconLanguage } from "@tabler/icons-react"
 
 export function LocaleChange({ url }: { url: string }) {
   const router = useRouter();
@@ -25,7 +25,7 @@ export function LocaleChange({ url }: { url: string }) {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant="ghost" size="sm" className="h-8 w-8 px-0">
-          <Icons.Languages />
+          <IconLanguage />
           <span className="sr-only"></span>
         </Button>
       </DropdownMenuTrigger>
