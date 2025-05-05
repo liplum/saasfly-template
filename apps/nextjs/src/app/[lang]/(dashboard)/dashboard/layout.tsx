@@ -6,7 +6,6 @@ import { LocaleChange } from "~/components/locale-change";
 import { MainNav } from "~/components/main-nav";
 import { DashboardNav } from "~/components/nav";
 import { SiteFooter } from "~/components/site-footer";
-import { UserAccountNav } from "~/components/user-account-nav";
 import { i18n, type Locale } from "~/config/i18n-config";
 import { getDashboardConfig } from "~/config/ui/dashboard";
 import { getDictionary } from "~/lib/get-dictionary";
@@ -42,15 +41,6 @@ export default async function DashboardLayout({
           />
           <div className="flex items-center space-x-3">
             <LocaleChange url={"/dashboard"} />
-            <UserAccountNav
-              user={{
-                name: user.name,
-                image: user.image,
-                email: user.email,
-              }}
-              params={{ lang: `${lang}` }}
-              dict={dict.dropdown}
-            />
           </div>
         </div>
       </header>

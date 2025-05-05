@@ -6,12 +6,9 @@ import type { User } from "next-auth";
 import { useSelectedLayoutSegment } from "next/navigation";
 
 import { cn } from "@saasfly/ui";
-import { Button } from "@saasfly/ui/button";
 
 import { MainNav } from "./main-nav";
 import { LocaleChange } from "~/components/locale-change";
-import { useSigninModal } from "~/hooks/use-signin-modal";
-import { UserAccountNav } from "./user-account-nav";
 
 import useScroll from "~/hooks/use-scroll";
 import type { MainNavItem } from "~/types";
@@ -32,17 +29,14 @@ interface NavBarProps {
 }
 
 export function NavBar({
-  user,
   items,
   children,
   rightElements,
   scroll = false,
   params: { lang },
   marketing,
-  dropdown,
 }: NavBarProps) {
   const scrolled = useScroll(50);
-  const signInModal = useSigninModal();
   const segment = useSelectedLayoutSegment();
 
   return (
@@ -81,34 +75,6 @@ export function NavBar({
 
           {rightElements}
           <LocaleChange url={"/"} />
-          {!user ? (
-            <Link href={`/${lang}/login`}>
-              <Button variant="outline" size="sm">
-                {typeof marketing.login === "string"
-                  ? marketing.login
-                  : "Default Login Text"}
-              </Button>
-            </Link>
-          ) : null}
-
-          {user ? (
-            <UserAccountNav
-              user={user}
-              params={{ lang: `${lang}` }}
-              dict={dropdown}
-            />
-          ) : (
-            <Button
-              className="px-3"
-              variant="default"
-              size="sm"
-              onClick={signInModal.onOpen}
-            >
-              {typeof marketing.signup === "string"
-                ? marketing.signup
-                : "Default Signup Text"}
-            </Button>
-          )}
         </div>
       </div>
     </header>

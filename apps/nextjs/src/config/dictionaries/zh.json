@@ -114,12 +114,5 @@
       "upgrade": "升级",
       "": ""
     }
-  },
-  "dropdown": {
-    "dashboard": "仪表板",
-    "billing": "计费",
-    "settings": "设置",
-    "sign_out": "登出",
-    "": ""
   }
 }

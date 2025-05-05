@@ -114,12 +114,5 @@
       "upgrade": "upgrade",
       "": ""
     }
-  },
-  "dropdown": {
-    "dashboard": "Dashboard",
-    "billing": "Billing",
-    "settings": "Settings",
-    "sign_out": "Sign out",
-    "": ""
   }
 }
