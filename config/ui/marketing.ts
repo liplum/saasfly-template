@@ -1,6 +1,10 @@
+import { MainNavItem } from "@/components/main-nav"
 import type { Locale } from "@/config/i18n-config"
 import { getDictionary } from "@/lib/get-dictionary"
-import type { MarketingConfig } from "@/types"
+
+export interface MarketingConfig {
+  mainNav: MainNavItem[]
+}
 
 export const getMarketingConfig = async ({
   params: { lang },

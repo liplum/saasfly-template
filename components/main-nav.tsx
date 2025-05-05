@@ -1,31 +1,38 @@
-"use client";
+"use client"
 
-import React from "react";
-import Link from "next/link";
+import React from "react"
+import Link from "next/link"
 
-import { DocumentGuide } from "@/components/document-guide";
-import { MobileNav } from "@/components/mobile-nav";
+import { DocumentGuide } from "@/components/document-guide"
+import { MobileNav } from "@/components/mobile-nav"
 
-import type { MainNavItem } from "@/types";
 import { IconCommand, IconX } from "@tabler/icons-react"
 
+export interface NavItem {
+  title: string
+  href: string
+  disabled?: boolean
+}
+
+export type MainNavItem = NavItem
+
 interface MainNavProps {
-  items?: MainNavItem[];
-  children?: React.ReactNode;
+  items?: MainNavItem[]
+  children?: React.ReactNode
   params: {
-    lang: string;
-  };
-  marketing: Record<string, unknown>;
+    lang: string
+  }
+  marketing: Record<string, unknown>
 }
 
 export function MainNav({ items, children, params: { lang }, marketing }: MainNavProps) {
-  const [showMobileMenu, setShowMobileMenu] = React.useState<boolean>(false);
+  const [showMobileMenu, setShowMobileMenu] = React.useState<boolean>(false)
   const toggleMenu = () => {
-    setShowMobileMenu(!showMobileMenu);
-  };
+    setShowMobileMenu(!showMobileMenu)
+  }
   const handleMenuItemClick = () => {
-    toggleMenu();
-  };
+    toggleMenu()
+  }
   return (
     <div className="flex gap-6 md:gap-10">
       <div className="flex items-center">
@@ -44,7 +51,7 @@ export function MainNav({ items, children, params: { lang }, marketing }: MainNa
         className="flex items-center space-x-2 md:hidden"
         onClick={() => setShowMobileMenu(!showMobileMenu)}
       >
-        {showMobileMenu ? <IconX/> : <IconCommand/>}
+        {showMobileMenu ? <IconX /> : <IconCommand />}
         <span className="font-bold">Menu</span>
       </button>
       {showMobileMenu && items && (
@@ -53,5 +60,5 @@ export function MainNav({ items, children, params: { lang }, marketing }: MainNa
         </MobileNav>
       )}
     </div>
-  );
+  )
 }

@@ -3,20 +3,15 @@
 import {
   useState,
 } from "react"
-import Link from "next/link"
 import Balancer from "react-wrap-balancer"
 
-import { Button, buttonVariants } from "@/ui/button"
+import { Button } from "@/ui/button"
 import { Switch } from "@/ui/switch"
 
-import { BillingFormButton } from "@/components/price/billing-form-button"
 import { priceDataMap } from "@/config/price/price-data"
-import { UserSubscriptionPlan } from "@/types"
 import { IconCheck, IconX } from "@tabler/icons-react"
 
 interface PricingCardsProps {
-  userId?: string
-  subscriptionPlan?: UserSubscriptionPlan
   dict: Record<string, string>
   params: {
     lang: string
@@ -24,8 +19,6 @@ interface PricingCardsProps {
 }
 
 export function PricingCards({
-  userId,
-  subscriptionPlan,
   dict,
   params: { lang },
 }: PricingCardsProps) {
@@ -126,29 +119,7 @@ export function PricingCards({
                       </li>
                     ))}
                 </ul>
-
-                {userId && subscriptionPlan ? (
-                  offer?.id === "starter" ? (
-                    <Link
-                      href="/dashboard"
-                      className={buttonVariants({
-                        className: "w-full",
-                        variant: "default",
-                      })}
-                    >
-                      {dict.go_to_dashboard}
-                    </Link>
-                  ) : (
-                    <BillingFormButton
-                      year={isYearly}
-                      offer={offer}
-                      subscriptionPlan={subscriptionPlan}
-                      dict={dict}
-                    />
-                  )
-                ) : (
-                  <Button>{dict.signup}</Button>
-                )}
+                <Button>{dict.signup}</Button>
               </div>
             </div>
           ),
