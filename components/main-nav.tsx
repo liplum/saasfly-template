@@ -3,7 +3,7 @@
 import React from "react"
 import Link from "next/link"
 
-import { DocumentGuide } from "@/components/document-guide"
+import { ReadMoreGuide } from "@/components/read-more-guide"
 import { MobileNav } from "@/components/mobile-nav"
 
 import { IconCommand, IconX } from "@tabler/icons-react"
@@ -41,9 +41,9 @@ export function MainNav({ items, children, params: { lang }, marketing }: MainNa
         </Link>
 
         <Link href="https://docs.saasfly.io" target="_blank" className="ml-4 hidden md:flex lg:flex xl:flex">
-          <DocumentGuide>
+          <ReadMoreGuide>
             {marketing?.introducing as string ?? "Introducing Saasfly"}
-          </DocumentGuide>
+          </ReadMoreGuide>
         </Link>
       </div>
 

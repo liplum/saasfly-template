@@ -4,7 +4,7 @@ import { IconChevronRight } from "@tabler/icons-react";
 import { cn } from "@/ui";
 import { AnimatedGradientText } from "@/ui/animated-gradient-text";
 
-export function DocumentGuide({ children }: { children: ReactNode }) {
+export function ReadMoreGuide({ children }: { children: ReactNode }) {
   return (
     <AnimatedGradientText>
       🚀 <hr className="mx-2 h-4 w-[1px] shrink-0 bg-gray-300" />{" "}

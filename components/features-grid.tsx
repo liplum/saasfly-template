@@ -1,4 +1,4 @@
-import { Card } from "@/ui/card"
+import { Card } from "@radix-ui/themes"
 import { IconBlocks, IconLanguage, IconReceiptDollar, IconShieldCheck } from "@tabler/icons-react"
 
 export function FeaturesGrid({ dict } : { dict: Record<string, string> | undefined }) {
