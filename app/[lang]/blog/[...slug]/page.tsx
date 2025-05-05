@@ -15,8 +15,8 @@ import { buttonVariants } from "@/ui/button"
 
 import { absoluteUrl, formatDate } from "@/app/utils"
 import { IconChevronLeft } from "@tabler/icons-react"
-import { Locale } from "@/i18n/config"
-import { useI18n } from "@/i18n/get"
+import { useI18n } from "@/i18n/server"
+import { Locale } from "@/i18n"
 
 interface PostPageProps {
   params: {

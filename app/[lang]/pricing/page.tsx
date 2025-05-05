@@ -1,7 +1,7 @@
 import { PricingCards } from "@/components/price/pricing-cards"
 import { PricingFaq } from "@/components/price/pricing-faq"
-import type { Locale } from "@/i18n/config"
-import { useI18n } from "@/i18n/get"
+import type { Locale } from "@/i18n"
+import { useI18n } from "@/i18n/server"
 
 export const metadata = {
   title: "Pricing",

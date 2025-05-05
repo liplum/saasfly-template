@@ -6,11 +6,10 @@ import { useSelectedLayoutSegment } from "next/navigation"
 
 import { cn } from "@/ui"
 
-import { MainNav } from "./main-nav"
+import { MainNav, MainNavItem } from "./main-nav"
 import { LocaleChange } from "@/components/locale-change"
 
 import useScroll from "@/hooks/use-scroll"
-import type { MainNavItem } from "@/types"
 
 interface NavBarProps {
   items?: MainNavItem[]

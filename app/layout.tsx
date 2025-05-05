@@ -8,8 +8,8 @@ import { Toaster } from "@/ui/toaster"
 
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme-provider"
-import { i18n } from "@/i18n/config"
 import { siteConfig } from "@/app/site"
+import { i18n } from "@/i18n"
 
 const fontSans = FontSans({
   subsets: ["latin"],

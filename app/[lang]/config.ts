@@ -1,6 +1,6 @@
 import { MainNavItem } from "@/components/main-nav"
-import type { Locale } from "@/i18n/config"
-import { useI18n } from "@/i18n/get"
+import type { Locale } from "@/i18n"
+import { useI18n } from "@/i18n/server"
 
 export interface MarketingConfig {
   mainNav: MainNavItem[]

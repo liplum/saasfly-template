@@ -1,13 +1,13 @@
 import { compareDesc } from "date-fns"
 
 import { allPosts } from ".contentlayer/generated"
-import { Locale } from "@/i18n/config"
-import { useI18n } from "@/i18n/get"
+import { useI18n } from "@/i18n/server"
 import Image from "next/image"
 import Link from "next/link"
 import Balancer from "react-wrap-balancer"
 
 import { formatDate } from "@/app/utils"
+import { Locale } from "@/i18n"
 
 export const metadata = {
   title: "Blog",
@@ -103,6 +103,7 @@ export default async function BlogPage({
     </main>
   )
 }
+
 interface Post {
   _id: string
   title: string
