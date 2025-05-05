@@ -58,7 +58,7 @@ export default async function middleware(request: NextRequest) {
   if (isNoNeedProcess(request)) {
     return null
   }
-  const isWebhooksRoute = /^\/api\/webhooks\//.test(request.nextUrl.pathname)
+  const isWebhooksRoute = request.nextUrl.pathname.startsWith("/api/webhooks/")
   if (isWebhooksRoute) {
     return NextResponse.next()
   }
@@ -91,7 +91,7 @@ const authMiddleware = withAuth(
     const isAuthPage = /^\/[a-zA-Z]{2,}\/(login|register)/.test(
       req.nextUrl.pathname,
     )
-    const isAuthRoute = /^\/api\/trpc\//.test(req.nextUrl.pathname)
+    const isAuthRoute = req.nextUrl.pathname.startsWith("/api/trpc/")
     const locale = getLocale(req)
 
     if (isAuthRoute) {

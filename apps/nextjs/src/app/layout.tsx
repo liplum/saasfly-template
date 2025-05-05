@@ -15,9 +15,6 @@ import { ThemeProvider } from "~/components/theme-provider";
 import { i18n } from "~/config/i18n-config";
 import { siteConfig } from "~/config/site";
 
-// import { Suspense } from "react";
-// import { PostHogPageview } from "~/config/providers";
-
 const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
@@ -79,9 +76,6 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head />
-      {/*<Suspense>*/}
-      {/*  <PostHogPageview />*/}
-      {/*</Suspense>*/}
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased",
