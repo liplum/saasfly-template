@@ -114,7 +114,6 @@
     "./input": "./src/input.tsx",
     "./label": "./src/label.tsx",
     "./marquee": "./src/marquee.tsx",
-    "./meteors": "./src/meteors.tsx",
     "./popover": "./src/popover.tsx",
     "./scroll-area": "./src/scroll-area.tsx",
     "./select": "./src/select.tsx",

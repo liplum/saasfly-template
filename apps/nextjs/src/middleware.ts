@@ -1,8 +1,8 @@
 import { redirect } from "next/navigation"
-import { NextRequest, NextResponse } from "next/server"
+import type { NextRequest} from "next/server";
+import { NextResponse } from "next/server"
 import { match as matchLocale } from "@formatjs/intl-localematcher"
 import Negotiator from "negotiator"
-import { withAuth } from "next-auth/middleware"
 
 import { i18n } from "~/config/i18n-config"
 
@@ -80,33 +80,8 @@ export default async function middleware(request: NextRequest) {
   if (isPublicPage(request)) {
     return null
   }
-  // @ts-ignore
-  return authMiddleware(request, null)
+  return NextResponse.next()
 }
-
-const authMiddleware = withAuth(
-  async function middlewares(req) {
-    const isAuthPage = /^\/[a-zA-Z]{2,}\/(login|register)/.test(
-      req.nextUrl.pathname,
-    )
-    const isAuthRoute = req.nextUrl.pathname.startsWith("/api/trpc/")
-    const locale = getLocale(req)
-
-    if (isAuthRoute) {
-      return NextResponse.next()
-    }
-    if (isAuthPage) {
-      return null
-    }
-  },
-  {
-    callbacks: {
-      authorized() {
-        return true
-      },
-    },
-  },
-)
 
 export const config = {
   matcher: ["/((?!.*\\..*|_next).*)", "/", "/(api|trpc)(.*)"],
