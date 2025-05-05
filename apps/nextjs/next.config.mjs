@@ -1,11 +1,7 @@
 // @ts-check
-import "./src/env.mjs";
-
 import { withNextDevtools } from "@next-devtools/core/plugin";
 // import "@saasfly/api/env"
 import withMDX from "@next/mdx";
-
-!process.env.SKIP_ENV_VALIDATION && (await import("./src/env.mjs"));
 
 /** @type {import("next").NextConfig} */
 const config = {
@@ -21,7 +17,7 @@ const config = {
     // serverActions: true,
   },
   images: {
-    domains: ["images.unsplash.com", "avatars.githubusercontent.com", "www.twillot.com", "cdnv2.ruguoapp.com", "www.setupyourpay.com"],
+    domains: [],
   },
   /** We already do linting and typechecking as separate tasks in CI */
   eslint: { ignoreDuringBuilds: true },

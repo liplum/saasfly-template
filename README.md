@@ -157,7 +157,6 @@ bun run dev:web
 ### 🐮 Platforms
 
 - **[Vercel](https://vercel.com/)** – Deploy your Next.js app with ease
-- **[Stripe](https://stripe.com/)** – Payment processing for internet businesses
 - **[Resend](https://resend.com/)** – Email marketing platform for developers
 
 ### 🐯 Enterprise Features
@@ -165,12 +164,6 @@ bun run dev:web
 - **[i18n](https://nextjs.org/docs/app/building-your-application/routing/internationalization)** - Support for internationalization
 - **[SEO](https://nextjs.org/docs/app/building-your-application/optimizing/metadata)** - Search engine optimization
 - **[MonoRepo](https://turbo.build/)** - Monorepo for better code management
-- **[T3 Env](https://env.t3.gg/)** - Manage your environment variables with ease
-
-### 🐰 Data Fetching
-
-- **[trpc](https://trpc.io/)** – End-to-end typesafe APIs made easy
-- **[tanstack/react-query](https://react-query.tanstack.com/)** – Hooks for fetching, caching and updating asynchronous data in React
 
 ### 🐲 Global State Management
 
