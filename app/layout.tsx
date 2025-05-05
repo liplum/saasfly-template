@@ -1,11 +1,10 @@
 import "@/styles/globals.css"
-import "@radix-ui/themes/styles.css";
+import "@radix-ui/themes/styles.css"
 
 import { Inter as FontSans } from "next/font/google"
 import localFont from "next/font/local"
 
 import cn from "@/components/cn"
-import { Toaster } from "@/components/toast/toaster"
 
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme-provider"
@@ -88,7 +87,6 @@ export default function RootLayout({
         >
           <Theme>
             {children}
-            <Toaster />
             <TailwindIndicator />
           </Theme>
         </ThemeProvider>
