@@ -1,7 +1,7 @@
+import "@/styles/globals.css"
+
 import { Inter as FontSans } from "next/font/google"
 import localFont from "next/font/local"
-
-import "./globals.css"
 
 import { cn } from "@/ui"
 import { Toaster } from "@/ui/toaster"
