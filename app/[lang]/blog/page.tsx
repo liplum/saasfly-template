@@ -13,6 +13,10 @@ export const metadata = {
   title: "Blog",
 }
 
+export const buildPostUrl = (lang: Locale, post: Post) => {
+  return `/${lang}/${post.slug}`
+}
+
 export default async function BlogPage({
   params,
 }: {
@@ -23,10 +27,6 @@ export default async function BlogPage({
   const { lang } = await params
   const i18n = await useI18n(lang)
 
-  const buildPostUrl = (post: Post) => {
-    return `/${lang}/${post.slug}`
-  }
-  
   const posts = allPosts
     .filter((post) => post.published)
     .sort((a, b) => {
@@ -59,7 +59,7 @@ export default async function BlogPage({
                   <Balancer>{posts[0]?.description}</Balancer>
                 </p>
               )}
-              <Link href={posts[0] ? buildPostUrl(posts[0]) : "/#"} className="absolute inset-0" />
+              <Link href={posts[0] ? buildPostUrl(lang, posts[0]) : "/#"} className="absolute inset-0" />
             </div>
           </article>
         </section>
@@ -94,7 +94,7 @@ export default async function BlogPage({
                     {formatDate(post.date)}
                   </p>
                 )}
-                <Link href={buildPostUrl(post)} className="absolute inset-0" />
+                <Link href={buildPostUrl(lang, post)} className="absolute inset-0" />
               </article>
             ))}
           </div>
