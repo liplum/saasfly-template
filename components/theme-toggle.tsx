@@ -10,44 +10,30 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/ui/dropdown-menu"
-import { IconBrightnessAuto, IconMoon, IconSun } from "@tabler/icons-react"
+import { IconSun, IconMoon, IconBrightnessAuto } from "@tabler/icons-react"
 
-export default function ThemeToggle(props: {
-  align?: "center" | "start" | "end"
-  side?: "top" | "bottom"
-}) {
-  const { setTheme, theme } = useTheme()
-
-  const triggerIcon = {
-    light: <IconSun className="h-6 w-6" />,
-    dark: <IconMoon className="h-6 w-6" />,
-    system: <IconBrightnessAuto className="h-6 w-6" />,
-  }[theme as "light" | "dark" | "system"]
+export function ThemeToggle() {
+  const { setTheme } = useTheme()
 
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button
-          variant="ghost"
-          size="sm"
-          className="gap-1 px-2 text-lg font-semibold md:text-base"
-        >
-          {triggerIcon}
-          <span className="capitalize">{theme}</span>
-          <span className="sr-only">Toggle theme</span>
+        <Button variant="ghost" size="sm" className="h-8 w-8 px-0">
+          <IconSun className="rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+          <IconMoon className="absolute rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align={props.align} side={props.side}>
+      <DropdownMenuContent align="end">
         <DropdownMenuItem onClick={() => setTheme("light")}>
-          <IconSun className="mr-2 h-4 w-4" />
+          <IconSun className="h-4" />
           <span>Light</span>
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("dark")}>
-          <IconMoon className="mr-2 h-4 w-4" />
+          <IconMoon className="h-4" />
           <span>Dark</span>
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("system")}>
-          <IconBrightnessAuto className="mr-2 h-4 w-4" />
+          <IconBrightnessAuto className="h-4" />
           <span>System</span>
         </DropdownMenuItem>
       </DropdownMenuContent>

@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import { cn } from "@/ui";
 
-import { ModeToggle } from "@/components/mode-toggle";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 function getCopyrightText(
   dict: Record<string, string | Record<string, string>>,
@@ -38,7 +38,7 @@ export function SiteFooter({
             {getCopyrightText(dict)}
           </p>
         </div>
-        <ModeToggle />
+        <ThemeToggle />
       </div>
     </footer>
   );
