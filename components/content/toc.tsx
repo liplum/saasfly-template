@@ -4,8 +4,8 @@ import * as React from "react";
 
 import { cn } from "@/ui";
 
-import type { TableOfContents } from "@/lib/toc";
-import { useMounted } from "@/lib/use-mounted";
+import type { TableOfContents } from "@/components/blog/toc";
+import { useMounted } from "@/hooks/use-mounted";
 
 interface TocProps {
   toc: TableOfContents;
