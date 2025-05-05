@@ -1,22 +1,18 @@
-import type { Locale } from "~/config/i18n-config";
-import { getDictionary } from "~/lib/get-dictionary";
-import type { DashboardConfig } from "~/types";
+import type { Locale } from "~/config/i18n-config"
+import { getDictionary } from "~/lib/get-dictionary"
+import type { DashboardConfig } from "~/types"
 
 export const getDashboardConfig = async ({
   params: { lang },
 }: {
   params: {
-    lang: Locale;
-  };
+    lang: Locale
+  }
 }): Promise<DashboardConfig> => {
-  const dict = await getDictionary(lang);
+  const dict = await getDictionary(lang)
 
   return {
     mainNav: [
-      {
-        title: dict.common.dashboard.main_nav_documentation,
-        href: "/docs",
-      },
       {
         title: dict.common.dashboard.main_nav_support,
         href: "/support",
@@ -40,5 +36,5 @@ export const getDashboardConfig = async ({
         href: "/dashboard/settings",
       },
     ],
-  };
-};
+  }
+}

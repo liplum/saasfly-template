@@ -34,7 +34,6 @@
     "main_nav_pricing": "价格",
     "main_nav_products": "产品",
     "main_nav_blog": "博客",
-    "main_nav_documentation": "文档",
     "login": "登录",
     "signup": "注册",
     "": "",
@@ -91,7 +90,6 @@
   "common": {
     "copyright": "版权所有 © ${currentYear} Nextify公司。保留所有权利。",
     "dashboard": {
-      "main_nav_documentation": "文档",
       "main_nav_support": "支持",
       "sidebar_nav_clusters": "集群",
       "sidebar_nav_billing": "账单",

@@ -34,7 +34,6 @@
     "main_nav_pricing": "Pricing",
     "main_nav_products": "Products",
     "main_nav_blog": "Blog",
-    "main_nav_documentation": "Documentation",
     "login": "Login",
     "signup": "Sign up",
     "": "",
@@ -91,7 +90,6 @@
   "common": {
     "copyright": "Copyright © ${currentYear} Nextify Limited. All rights reserved.",
     "dashboard": {
-      "main_nav_documentation": "Documentation",
       "main_nav_support": "Support",
       "sidebar_nav_clusters": "Clusters",
       "sidebar_nav_billing": "Billing",
