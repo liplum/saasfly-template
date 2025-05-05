@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { getDictionary } from "@/i18n/get-dictionary"
+import { getDictionary } from "@/i18n/get"
 
 import { Comments } from "@/components/comments"
 import { FeaturesGrid } from "@/components/features-grid"

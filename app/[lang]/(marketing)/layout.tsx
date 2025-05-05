@@ -4,7 +4,7 @@ import { NavBar } from "@/components/navbar"
 import { SiteFooter } from "@/components/site-footer"
 import type { Locale } from "@/i18n/config"
 import { getMarketingConfig } from "@/app/[lang]/(marketing)/config"
-import { getDictionary } from "@/i18n/get-dictionary"
+import { getDictionary } from "@/i18n/get"
 
 export default async function MarketingLayout({
   children, params,
