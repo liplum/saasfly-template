@@ -1,21 +1,21 @@
-import { Suspense } from "react";
+import { Suspense } from "react"
 
-import { NavBar } from "~/components/navbar";
-import { SiteFooter } from "~/components/site-footer";
-import type { Locale } from "~/config/i18n-config";
-import { getMarketingConfig } from "~/config/ui/marketing";
-import { getDictionary } from "~/lib/get-dictionary";
+import { NavBar } from "~/components/navbar"
+import { SiteFooter } from "~/components/site-footer"
+import type { Locale } from "~/config/i18n-config"
+import { getMarketingConfig } from "~/config/ui/marketing"
+import { getDictionary } from "~/lib/get-dictionary"
 
 export default async function MarketingLayout({
-  children,
-  params: { lang },
+  children, params,
 }: {
-  children: React.ReactNode;
-  params: {
-    lang: Locale;
-  };
+  children: React.ReactNode
+  params: Promise<{
+    lang: Locale
+  }>
 }) {
-  const dict = await getDictionary(lang);
+  const { lang } = await params
+  const dict = await getDictionary(lang)
   return (
     <div className="flex min-h-screen flex-col">
       <Suspense fallback="...">
@@ -35,5 +35,5 @@ export default async function MarketingLayout({
         dict={dict.common}
       />
     </div>
-  );
+  )
 }

@@ -1,31 +1,27 @@
-"use client";
+"use client"
 
-import React from "react";
-import Link from "next/link";
-import type { User } from "next-auth";
-import { useSelectedLayoutSegment } from "next/navigation";
+import React from "react"
+import Link from "next/link"
+import { useSelectedLayoutSegment } from "next/navigation"
 
-import { cn } from "@saasfly/ui";
+import { cn } from "@saasfly/ui"
 
-import { MainNav } from "./main-nav";
-import { LocaleChange } from "~/components/locale-change";
+import { MainNav } from "./main-nav"
+import { LocaleChange } from "~/components/locale-change"
 
-import useScroll from "~/hooks/use-scroll";
-import type { MainNavItem } from "~/types";
-
-type Dictionary = Record<string, string>;
+import useScroll from "~/hooks/use-scroll"
+import type { MainNavItem } from "~/types"
 
 interface NavBarProps {
-  user: Pick<User, "name" | "image" | "email"> | undefined;
-  items?: MainNavItem[];
-  children?: React.ReactNode;
-  rightElements?: React.ReactNode;
-  scroll?: boolean;
+  items?: MainNavItem[]
+  children?: React.ReactNode
+  rightElements?: React.ReactNode
+  scroll?: boolean
   params: {
-    lang: string;
-  };
-  marketing: Dictionary;
-  dropdown: Record<string, string>;
+    lang: string
+  }
+  marketing: Record<string, unknown>
+  dropdown: Record<string, string>
 }
 
 export function NavBar({
@@ -36,14 +32,13 @@ export function NavBar({
   params: { lang },
   marketing,
 }: NavBarProps) {
-  const scrolled = useScroll(50);
-  const segment = useSelectedLayoutSegment();
+  const scrolled = useScroll(50)
+  const segment = useSelectedLayoutSegment()
 
   return (
     <header
-      className={`sticky top-0 z-40 flex w-full justify-center border-border bg-background/60 backdrop-blur-xl transition-all ${
-        scroll ? (scrolled ? "border-b" : "bg-background/0") : "border-b"
-      }`}
+      className={`sticky top-0 z-40 flex w-full justify-center border-border bg-background/60 backdrop-blur-xl transition-all ${scroll ? (scrolled ? "border-b" : "bg-background/0") : "border-b"
+        }`}
     >
       <div className="container flex h-16 items-center justify-between py-4">
         <MainNav items={items} params={{ lang: `${lang}` }} marketing={marketing}>
@@ -78,5 +73,5 @@ export function NavBar({
         </div>
       </div>
     </header>
-  );
+  )
 }

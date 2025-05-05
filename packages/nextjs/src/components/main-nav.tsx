@@ -15,7 +15,7 @@ interface MainNavProps {
   params: {
     lang: string;
   };
-  marketing: Record<string, string>;
+  marketing: Record<string, unknown>;
 }
 
 export function MainNav({ items, children, params: { lang }, marketing }: MainNavProps) {
