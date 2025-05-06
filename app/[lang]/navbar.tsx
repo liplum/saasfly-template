@@ -6,7 +6,7 @@ import { useSelectedLayoutSegment } from "next/navigation"
 
 import cn from "@/components/cn"
 
-import { MainNav, MainNavItem } from "./[lang]/main-nav"
+import { MainNav, MainNavItem } from "./main-nav"
 import { LocaleSelector } from "@/app/[lang]/locale-change"
 
 import useScroll from "@/hooks/use-scroll"

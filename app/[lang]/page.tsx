@@ -3,7 +3,7 @@ import { useI18n } from "@/i18n/server"
 
 import { Comments } from "@/app/[lang]/comments"
 import { FeaturesGrid } from "@/app/[lang]/features-grid"
-import { RightSideMarketing } from "@/app/right-side-marketing"
+import { RightSideMarketing } from "@/app/[lang]/right-side-marketing"
 
 import { BackgroundLines } from "@/components/background-lines"
 import { ColorfulText } from "@/components/colorful-text"

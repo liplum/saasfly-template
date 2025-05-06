@@ -6,7 +6,7 @@ import cn from "@/components/cn";
 import { siteConfig } from "@/app/site";
 import { useLockBody } from "@/hooks/use-lock-body";
 import { IconCommand } from "@tabler/icons-react"
-import { MainNavItem } from "./[lang]/main-nav"
+import { MainNavItem } from "./main-nav"
 
 interface MobileNavProps {
   items: MainNavItem[];
