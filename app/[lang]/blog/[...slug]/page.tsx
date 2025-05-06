@@ -10,12 +10,11 @@ import Image from "next/image"
 import Link from "next/link"
 import Balancer from "react-wrap-balancer"
 
-import cn from "@/components/cn"
-
-import { absoluteUrl, formatDate } from "@/app/utils"
+import { formatDate } from "@/app/utils"
 import { IconChevronLeft } from "@tabler/icons-react"
 import { useI18n } from "@/i18n/server"
 import { Locale } from "@/i18n"
+import { siteConfig } from "@/app/site"
 
 interface PostPageProps {
   params: {
@@ -46,9 +45,9 @@ export async function generateMetadata({ params }: {
     return {}
   }
 
-  const url = process.env.NEXT_PUBLIC_APP_URL
+  const baseUrl = siteConfig.baseUrl
 
-  const ogUrl = new URL(`${url}/api/og`)
+  const ogUrl = new URL(`/api/og`, baseUrl)
   ogUrl.searchParams.set("heading", post.title)
   ogUrl.searchParams.set("type", "Blog Post")
   ogUrl.searchParams.set("mode", "dark")
@@ -63,7 +62,7 @@ export async function generateMetadata({ params }: {
       title: post.title,
       description: post.description,
       type: "article",
-      url: absoluteUrl(post.slug),
+      url: new URL(post.slug, baseUrl),
       images: [
         {
           url: ogUrl.toString(),

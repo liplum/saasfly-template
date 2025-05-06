@@ -1,8 +1,9 @@
 import { MetadataRoute } from "next"
+import { siteConfig } from "./site"
+import { i18n } from "@/i18n"
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = process.env.NEXT_PUBLIC_APP_URL as string
-  const sitemapUrl = new URL("/sitemap.xml", baseUrl)
+  const baseUrl = siteConfig.baseUrl
 
   return {
     rules: {
@@ -10,7 +11,10 @@ export default function robots(): MetadataRoute.Robots {
       allow: ["/"],
     },
     sitemap: [
-      `${sitemapUrl}`
+      `${new URL("/sitemap.xml", baseUrl)}`,
+      ...i18n.locales.map(lang =>
+        `${new URL(`/${lang}/blog/sitemap.xml`, baseUrl)}`
+      ),
     ]
   }
 }
