@@ -1,6 +1,6 @@
 import { Suspense } from "react"
 
-import { NavBar } from "@/components/navbar"
+import { NavBar } from "@/app/navbar"
 import { SiteFooter } from "@/components/site-footer"
 import type { Locale } from "@/i18n"
 import { getMarketingConfig } from "@/app/[lang]/config"

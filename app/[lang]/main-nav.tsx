@@ -3,8 +3,8 @@
 import React from "react"
 import Link from "next/link"
 
-import { ReadMoreGuide } from "@/components/read-more-guide"
-import { MobileNav } from "@/components/mobile-nav"
+import { ReadMoreGuide } from "@/app/read-more-guide"
+import { MobileNav } from "@/app/mobile-nav"
 
 import { IconCommand, IconX } from "@tabler/icons-react"
 
