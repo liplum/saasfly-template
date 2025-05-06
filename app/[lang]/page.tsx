@@ -6,7 +6,7 @@ import { FeaturesGrid } from "@/app/[lang]/features-grid"
 import { RightSideMarketing } from "@/components/right-side-marketing"
 
 import { BackgroundLines } from "@/components/background-lines"
-import { ColourfulText } from "@/components/colorful-text"
+import { ColorfulText } from "@/components/colorful-text"
 
 import type { Locale } from "@/i18n"
 import { IconArrowRight } from "@tabler/icons-react"
@@ -32,7 +32,7 @@ export default async function IndexPage({
                 <div
                   className="mb-6 max-w-4xl text-left text-4xl font-semibold dark:text-zinc-100 md:text-5xl xl:text-5xl md:leading-[4rem] xl:leading-[4rem]">
                   {dict.marketing.title || "Ship your apps to the world easier with "}
-                  <ColourfulText text="Saasfly" />
+                  <ColorfulText text="Saasfly" />
                 </div>
               </div>
 

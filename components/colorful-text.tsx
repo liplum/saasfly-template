@@ -3,7 +3,7 @@
 import * as React from "react";
 import { motion } from "framer-motion";
 
-export function ColourfulText({ text }: { text: string }) {
+export function ColorfulText({ text }: { text: string }) {
   const colors = [
     "rgb(131, 179, 32)",
     "rgb(47, 195, 106)",
