@@ -1,7 +1,7 @@
 import { Suspense } from "react"
 
 import { NavBar } from "@/app/[lang]/navbar"
-import { SiteFooter } from "@/components/site-footer"
+import { SiteFooter } from "@/app/[lang]/site-footer"
 import type { Locale } from "@/i18n"
 import { getMarketingConfig } from "@/app/[lang]/config"
 import { useI18n } from "@/i18n/server"
